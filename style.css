@@ -1,0 +1,88 @@
+                                                                            /* 格式化所有元素 */
+                                                                        
+                                                                        * {
+                                                                            margin: 0;
+                                                                            padding: 0;
+                                                                            /* 兼容Firefox */
+                                                                            -moz-box-sizing: border-box;
+                                                                            /* 兼容低版本IOS和Android浏览器 */
+                                                                            -webkit-box-sizing: border-box;
+                                                                            box-sizing: border-box;
+                                                                            font-family: Arial, Helvetica, sans-serif;
+                                                                        }
+                                                                        
+                                                                        body {
+                                                                            display: flex;
+                                                                            justify-content: center;
+                                                                            align-self: center;
+                                                                            /* vh就是当前屏幕可见高度的百分比
+                    好处:当元素没有内容时候，设置height:100%该元素不会被撑开，但是设置height:100vh，该元素会被撑开屏幕高度一致 */
+                                                                            min-height: 100vh;
+                                                                            background: #33d1a0;
+                                                                        }
+                                                                        
+                                                                        .container {
+                                                                            position: relative;
+                                                                            width: 1100px;
+                                                                            display: flex;
+                                                                            justify-content: space-evenly;
+                                                                            align-items: center;
+                                                                            /* 自动换行 */
+                                                                            flex-wrap: wrap;
+                                                                            margin: 20px;
+                                                                        }
+                                                                        
+                                                                        .container .box {
+                                                                            position: relative;
+                                                                            display: flex;
+                                                                            justify-content: center;
+                                                                            align-items: center;
+                                                                            width: 320px;
+                                                                            height: 420px;
+                                                                            margin: 20px;
+                                                                            background: rgba(140, 0, 255, 0.192);
+                                                                        }
+                                                                        
+                                                                        .container .box .content {
+                                                                            padding: 30px;
+                                                                            text-align: center;
+                                                                        }
+                                                                        
+                                                                        .container .box .content .quote {
+                                                                            max-width: 48px;
+                                                                        }
+                                                                        
+                                                                        .container .box .content p {
+                                                                            color: rgba(0, 0, 0, 0.795);
+                                                                            padding: 20px0;
+                                                                        }
+                                                                        
+                                                                        .container .box .content .user {
+                                                                            max-width: 72px;
+                                                                            border-radius: 50%;
+                                                                        }
+                                                                        
+                                                                        .container .box .content h1 {
+                                                                            color: black;
+                                                                            /* 转为大写字母 */
+                                                                            text-transform: uppercase;
+                                                                            font-size: 16px;
+                                                                            /* 设置字体间距 */
+                                                                            letter-spacing: 1px;
+                                                                            /* 设置字体粗细 */
+                                                                            font-weight: 600;
+                                                                        }
+                                                                        /* 设置媒介尺寸变化 */
+                                                                        
+                                                                        @media (max-width: 1050px) {
+                                                                            .container {
+                                                                                justify-content: center;
+                                                                            }
+                                                                        }
+                                                                        
+                                                                        @media (max-width: 768px) {
+                                                                            .container .box {
+                                                                                width: 100%;
+                                                                                height: auto;
+                                                                                padding: 30px 20px;
+                                                                            }
